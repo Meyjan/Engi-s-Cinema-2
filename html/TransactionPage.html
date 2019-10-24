@@ -1,0 +1,38 @@
+    <!DOCTYPE html>
+<html>
+ 
+    <head>
+        <title>Engima Film - Transaction</title>
+        <link rel = "stylesheet" type = "text/css" href = "../css/TransactionPage.css" />
+    </head>
+
+    <body>
+        <nav>
+            <div class="container">
+                <label>
+                    <span id="BlueEngi">Engi</span>ma
+                </label>
+                <form method = "GET" action = "SearchPage.html">
+                    <input type= "text" placeholder = "Search movie" name = "searchVal"/>
+                    <button class = "button-submit" type = "submit">
+                        <img src = "../data/icons/vectorpaint.svg" class = "button-icon">
+                    </button>
+                </form>
+                <a onclick=logout()>
+                    Logout
+                </a>
+                <a href="TransactionPage.html">
+                    Transaction
+                </a>
+            </div>
+        </nav>
+
+        <div class="content-white">
+            <div class="movie-title">Transaction History</div>
+            <div class="movie-container" id="movie-container" name="movie-container">
+                
+            </div>
+            <script type="text/javascript" src="../js/TransactionPage.js"></script>
+        </div>
+    </body>
+</html>

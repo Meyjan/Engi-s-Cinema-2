@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+form {
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+label{
+  font-size: 12px;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 11px;
+  font-family: inherit;
+}
+
+a {
+  color: #00aeef;
+  text-decoration: none;
+}
+
+input[type="email"],
+input[type="password"] {
+  border: 1px solid #888888;
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 8px;
+  margin-bottom: 17px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#SubmitLogin {
+  border-style: solid;
+  border-radius: 7px;
+  background-color: #00aeef;
+  color: #ffffff;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#BigEngi {
+  font-weight: bolder;
+}
+
+.container {
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+}
+
+.error {
+  color: red;
+  font-family: inherit;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+
+.login-box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-top: 3%;
+  margin-left: 35%;
+  margin-right: 35%;
+  padding: 10px;
+}
+
+.login-box:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title-font {
+  margin-top: 10%;
+  font-size: 19px;
+  font-weight: bold;
+  font-family: inherit;
+}

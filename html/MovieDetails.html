@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/HomePage.css" />
+    <link rel="stylesheet" type="text/css" href="../css/MovieDetails.css" />
+    <title>Avengers: Endgame</title>
+</head>
+<body>
+    <nav>
+        <div class = "container">
+            <label>
+                <span id = "BlueEngi">Engi</span>ma
+            </label>
+            <form method = "GET" action = "SearchPage.html">
+                <input type= "text" placeholder = "Search movie" name = "searchVal"/>
+                <button class = "button-submit" type = "submit">
+                    <img src = "../data/icons/vectorpaint.svg" class = "button-icon">
+                </button>
+            </form>
+            
+
+            <a href = "LoginPage.html">
+                Logout
+            </a>
+            <a href = "TransactionPage.html">
+                Transactions
+            </a>
+        </div>
+    </nav>
+
+    <div class="content-white movie-details">
+        <div class="movie-content">
+            <img src="../data/photos/cptmarvel.jpg" id="movie-poster">
+            
+            <div class="movie-desc">
+                <p id="movie-title">Avengers: Endgame</p>
+
+                <div id="movie-runtime-genre">
+                    <p id="genre">Drama, Fantasy, Adventure</p>
+                    <hr>
+                    <p id="runtime">187 mins</p>
+                </div>
+
+                <p id="release-date">Released date: April 17, 2019</p>
+
+                <div id="movie-rating">
+                    <img src="../data/icons/star.png" id="star">
+                    <p id="movie-score">8.75</p>
+                    <p >/10</p>
+                </div>
+
+                <p id="desc-content">
+                    After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.
+                </p>
+            </div>
+        </div>
+
+        <div class="schedule-review">
+            <div class="box-entity" id="movie-schedule">
+                <p style="font-size: 2em">Schedules</p>
+
+                <table id="schedule-list">
+                    <tr id="schedule-header">
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Available Seats</th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="box-entity" id="movie-review">
+                <p style="font-size: 2em">Reviews</p>
+
+                
+            </div>
+        </div>
+    </div>
+    <script type = "text/javascript" src = "../js/MovieDetails.js"></script>
+
+</body>
+</html>

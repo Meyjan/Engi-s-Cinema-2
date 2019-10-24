@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body{
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    margin: 0px;
+    height: 0px;
+    min-height: 1000px;
+    background: -moz-linear-gradient(left,  black 0%, black 10%, white 10%, white 90%, black 90%, black 100%);
+    background: -webkit-linear-gradient(left,  black 0%, black 10%, white 10%, white 90%, black 90%, black 100%);
+    background: linear-gradient(to right,  black 0%, black 10%, white 10%, white 90%, black 90%, black 100%);
+}
+
+nav{
+    padding-top: 10px;
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.2);
+    display: block;
+    position: fixed;
+}
+
+a {
+    cursor: pointer;
+}
+
+.button-submit{
+    float: left;
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    background-color: transparent;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-left: -34px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-icon{
+    fill: gray;
+    width: 15px;
+    height: 15px;
+}
+
+#BlueEngi{
+    padding-top: 0;
+    color:#00aeef;
+    font-weight: bolder;
+}
+
+#BlueEngiNotSoBold {
+    color:#00aeef;
+}
+
+nav a{
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav label {
+    padding: 7px;
+    padding-left: 10px;
+    float: left;
+    font-size: 24px;
+}
+
+nav input {
+    float: left;
+    padding: 7px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    margin-left: 100px;
+    font-weight: lighter;
+    height: 15px;
+    width: 300px;
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.container {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.content-white{
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 70px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 130px;
+}
+
+.movie-title{
+    font-weight: bolder;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+.movie-nowplaying {
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.movie-container {
+    margin-top: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.movie-item {
+    width: 190px;
+    height: 300px;
+    margin: 10px;
+}
+
+.movie-item img {
+    border-radius: 5px;
+    width: 100%;
+    height: 80%;
+    margin-bottom: 7px;
+}
+
+.movie-item .movie_name {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.movie-item .movie-rating {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.movie-item .movie-rating img {
+    width: 20px;
+    height: 20px;
+}
+
+.movie-item .movie-rating .rate-num {
+    margin-top: 3.5px;
+    margin-left: 5px;
+}
+#engima {
+    padding-top: 0;
+}

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+form {
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 11px;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  color: #00aeef;
+  text-decoration: none;
+}
+
+input,
+button {
+  font-family: inherit;
+  border: 1px solid #888888;
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#InputFile {
+  border: 1px solid #888888;
+  width: 100%;
+  padding: 12px 20px;
+  height: 50px;
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: white;
+  display: inline-block;
+  cursor: pointer;
+}
+
+[type="file"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  margin-top: 10px;
+}
+
+[type="file"] + label {
+  border-style: solid;
+  border-radius: 7px;
+  text-decoration-color: #ffffff;
+  background-color: gray;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: lighter;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+  
+[type="file"]:focus + label {
+  outline: 1px dotted #000;
+}
+
+#SubmitButton {
+  border-style: solid;
+  border-radius: 7px;
+  background-color: #00aeef;
+  color: #ffffff;
+  margin: 8px 0;
+  height: 65px;
+  font-size: 18px;
+}
+
+#BigEngi {
+  font-weight: bolder;
+}
+
+.column-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.column-left-content {
+  padding-right: 10px;
+  text-align: left;
+  align-content: flex-start;
+  font-weight: normal;
+  font-size: 14px;
+}
+.column-right-content {
+  margin-top: 13px;
+  width: 60%;
+  text-align: right;
+  align-content: flex-end;
+}
+
+.container {
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+}
+
+.register-box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-top: 3%;
+  margin-left: 35%;
+  margin-right: 35%;
+  padding: 10px;
+}
+
+.register-box:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.register-picture {
+  float: left;
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+
+.title-font {
+  margin-top: 5%;
+  font-size: 19px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 10%;
+}
+

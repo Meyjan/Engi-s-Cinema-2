@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="../css/SearchPage.css" />
+        <link rel="stylesheet" type="text/css" href="../css/HomePage.css" />
+        <title>Search results for</title>
+    </head>
+
+    <body>
+        <div class = "">
+            <nav>
+                <div class = "container">
+                    <label>
+                        <span id = "BlueEngi">Engi</span>ma
+                    </label>
+                    <form method = "GET" action = "SearchPage.html">
+                        <input type= "text" placeholder = "Search movie" name = "searchVal"/>
+                        <button class = "button-submit" type = "submit">
+                            <img src = "../data/icons/vectorpaint.svg" class = "button-icon">
+                        </button>
+                    </form>
+
+
+                    <a onclick = "logout()">
+                        Logout
+                    </a>
+                    <a href = "TransactionPage.html">
+                        Transactions
+                    </a>
+                </div>
+            </nav>
+
+            <div class="search-result content-white">
+                <p id="return-text">Search Result for </p>
+                <p id="return-count"><span id="num-count">14</span> results available</p>
+
+                <div class="lister">
+                    <ul class="return-list" id = "return-list-container">
+                        
+                    </ul>
+                </div>
+
+                <div class="page-container" id = "p-container">
+                </div>
+            </div>
+        </div>
+        <script type = "text/javascript" src = "../js/SearchPage.js"></script>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Engima Film - User Review</title>
+        <link rel = "stylesheet" type = "text/css" href = "../css/ReviewPage.css" />
+        
+    </head>
+
+    <body>
+        <nav>
+            <div class = "container">
+                <label>
+                    <a href="HomePage.html" id="engima"><span id = "BlueEngi">Engi</span>ma</a>
+                </label>
+                <form method = "GET" action = "SearchPage.html">
+                    <input type= "text" placeholder = "Search movie" name = "searchVal"/>
+                    <button class = "button-submit" type = "submit">
+                        <img src = "../data/icons/vectorpaint.svg" class = "button-icon">
+                    </button>
+                </form>
+                
+
+                <a onclick = logout()>
+                    Logout
+                </a>
+                <a href = "TransactionPage.html">
+                    Transactions
+                </a>
+            </div>
+        </nav>
+
+        <div class = "content-white">
+            <div class = "first-container">
+                <img src = "../data/icons/left_arrow.png" class = "left-arrow">
+                <div class = "first-inner-container">
+                    <div class = "title-test" id = "title_test">Avengers: Endgame</div>
+                </div>
+            </div>
+            <div class = "second-container">
+                <div class = "rating-area">
+                    <div class = "rating-title">
+                        Rating
+                    </div>
+                    <div class = "rating-star-area">
+                        <img class = "rating-stars" src = "../data/icons/gray_star.png" pepega = "1" onclick = "selectValue(this)">
+                        <img class = "rating-stars" src = "../data/icons/gray_star.png" pepega = "2"  onclick = "selectValue(this)">
+                        <img class = "rating-stars" src = "../data/icons/gray_star.png" pepega = "3"  onclick = "selectValue(this)">
+                        <img class = "rating-stars" src = "../data/icons/gray_star.png" pepega = "4"  onclick = "selectValue(this)">
+                        <img class = "rating-stars" src = "../data/icons/gray_star.png" pepega = "5"  onclick = "selectValue(this)">
+                        <img class = "rating-stars" src = "../data/icons/gray_star.png" pepega = "6"  onclick = "selectValue(this)">
+                        <img class = "rating-stars" src = "../data/icons/gray_star.png" pepega = "7"  onclick = "selectValue(this)">
+                        <img class = "rating-stars" src = "../data/icons/gray_star.png" pepega = "8"  onclick = "selectValue(this)">
+                        <img class = "rating-stars" src = "../data/icons/gray_star.png" pepega = "9"  onclick = "selectValue(this)">
+                        <img class = "rating-stars" src = "../data/icons/gray_star.png" pepega = "10" onclick = "selectValue(this)">
+                        <input type = "record" id = "record" value = 0 hidden = True name="record">
+                    </div>
+                </div>
+                <div class = "review-area">
+                    <div class = "review-title">
+                        Review
+                    </div>
+                    <textarea type="text" class = "review-textbox" id = "review-textbox" name = "review-textbox"></textarea>
+                </div>
+                <div class="submits">
+                    <button class="cancel-button" value="Cancel" formaction="TransactionPage.html">Cancel</button>
+                    <input class="submit-button" type="submit" id="SubmitButton" name="review" value="Submit" onclick = "submitReview(event)">
+                </div>
+            </div>
+        </div>
+        <script type = "text/javascript" src = "../js/ReviewPage.js"></script>
+    </body>
+</html>
