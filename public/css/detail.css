@@ -1,0 +1,217 @@
+.flex{
+    display: flex;
+}
+
+.image{
+    height: 200px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.leftcontent{
+    margin: 0px 20px 20px 0px;
+    float: left;
+}
+
+.rightcontentsearch{
+    flex-direction: column;
+    align-content: center;
+    margin-right: 50px;
+}
+
+.footnav {
+    margin: 0 auto;
+    text-align: center;
+}
+.btn_prev {
+    position: relative;
+    
+}
+
+.btn_prev {
+    position: relative;
+}
+
+.leftcontentsearch{
+    margin: 0px 20px 20px 0px;
+    float: left;
+}
+
+.rightcontent{
+    flex-direction: column;
+    align-content: center;
+    margin-right: 50px;
+}
+.rightcontent .title{
+    font-size: 24px;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.rightcontent .genre-time{
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px;
+    color: #2eb6bf;
+}
+
+.rightcontent .released{
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px;
+    color: #636363;   
+}
+
+.rightcontent .rating{
+    padding: 5px;
+    font-weight: bold;
+    color: #636363;
+}
+
+.rightcontent .synopsis{
+    font-size: 13px;
+    padding: 5px;
+    color: #636363;
+}
+
+.contenttitle{
+    font-size: 20px;
+    padding: 20px 10px;
+    font-weight: bold;
+}
+
+.leftcontent .schedule{
+    border-radius: 5px;
+    width: 550px;
+    border-color: #636363;
+    box-shadow: 1px 1px 7px -2px gray;
+}
+
+.rightcontent .review{
+    border-radius: 5px;
+    right: 50px;
+    width: 400px;
+    border-color: #636363;
+    box-shadow: 1px 1px 7px -2px gray;
+}
+
+.schedule > div.flex#attribute{
+    margin: 0px 10px 20px 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #bdbdbd;
+}
+
+ul div.flex#attribute{
+    margin: 0px 10px 20px 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #bdbdbd;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+ul li:last-child .flex#attribute{
+    border-bottom: none;
+}
+
+span#date{
+    font-size: 13px;
+    font-weight: bold;
+    color: #636363;
+}
+
+span#filmtime{
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 140px;
+    color: #636363; 
+}
+
+span#seat{
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 105px;
+    color: #636363; 
+}
+
+span#seatvalue{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+span#notavail{
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 70px;
+    color: red;
+    float: right;
+    margin-top: -3px;
+}
+
+span#avail{
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 70px;
+    color: #2eb6bf;
+    float: right;
+    margin-top: -3px;
+}
+
+.flex#attribute img{
+    padding-left: 5px;
+    margin-bottom: -5px;
+}
+
+#datevalue{
+    font-size: 13px;
+    font-weight: bold;
+    color: #636363;
+    margin-right: 50px;
+}
+
+#filmtimevalue{
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 75px;
+    color: #636363; 
+}
+
+.userimage{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.review li{
+    list-style-type: none;
+    margin: 0px 10px 10px 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #bdbdbd;
+}
+
+.review li:last-child{
+    list-style-type: none;
+    border-bottom: none;
+}
+
+.rightcontent #username{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    color: #636363;   
+}
+
+.rightcontent #userrating{
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px;
+    color: #636363;
+}
+
+.rightcontent #userreview{
+    margin-right: -50px;
+    font-size: 13px;
+    padding: 5px;    
+    color: #636363;
+}

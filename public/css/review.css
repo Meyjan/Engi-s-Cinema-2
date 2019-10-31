@@ -1,0 +1,100 @@
+.prevnav{
+    height: 40px;
+    width: 50px;
+    float: left;
+}
+
+#title{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0 0 20px;
+}
+
+#flexrating{
+    padding: 100px 0px 0px 175px;
+}
+
+#flexreview{
+    padding: 0px 0px 0px 175px;
+}
+
+#leftcontentstyle{
+    font-weight: bold;
+    padding-top: 25px;
+}
+
+#rightcontentstyle{
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+#reviewcontent{
+    width: 500px;
+    height: 150px;
+    border-radius: 5px;
+    resize: none;
+}
+
+#button{
+    float: right;
+}
+
+#buttoncancel{
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: white;
+    border-width: 1px;
+    border: 0.5px solid #bdbdbd;
+}
+
+#buttonsubmit{
+    margin: 10px 0px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #2eb6bf;
+    color: white;
+    border-width: 1px;
+    border: 0.5px solid #bdbdbd;
+}
+
+.reviewstar {
+    float: left;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.reviewstar:not(:checked) > input {
+    position: absolute;
+    padding-bottom: 20px;
+    top:-9999px;
+}
+.reviewstar:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.reviewstar:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.reviewstar:not(:checked) > label:hover,
+.reviewstar:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+
+.reviewstar > input:checked ~ label {
+    color: #ffc700;    
+}
+
+.reviewstar > input:checked + label:hover,  
+.reviewstar > input:checked + label:hover ~ label,
+.reviewstar > input:checked ~ label:hover,
+.reviewstar > input:checked ~ label:hover ~ label,
+.reviewstar > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}

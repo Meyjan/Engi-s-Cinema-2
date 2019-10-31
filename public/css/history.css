@@ -1,0 +1,82 @@
+#transaction{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: -20px;
+    padding: 20px 0;
+}
+
+.imagehistory{
+    height: 125px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+ul#history li{
+    list-style-type: none;
+    margin-top: 20px;
+    border-bottom: 1px solid #bdbdbd;
+    margin-right: 50px;
+}
+
+ul#history li:last-child{
+    list-style-type: none;
+    border-bottom: none;
+}
+
+#rightcontenttime{
+    padding: 25px 0px 25px 0px;
+    margin-right: 0px;
+    width: 100%;
+}   
+
+.filmtitle{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.time{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    color: #2eb6bf;
+}
+
+div.time span{
+    margin-left: 15px;
+    color: black;
+}
+
+a.add_review{
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #2eb6bf;
+    font-weight: bold;
+    color: white;
+    float: right;
+    text-decoration: none;
+}
+
+a.edit_review{
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 10px;    
+    background-color: #1BBB09;
+    font-weight: bold;
+    color: white;
+    float: right;
+    text-decoration: none;
+}
+
+a.delete_review{
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #EE0000;
+    font-weight: bold;
+    color: white;
+    float: right;
+    margin-right: 10px;
+    text-decoration: none;
+}

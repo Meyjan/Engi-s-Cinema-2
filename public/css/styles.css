@@ -1,0 +1,240 @@
+/* PAGE LAYOUT */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden
+}
+
+.container{
+    background-color: #ffffff;
+    max-width: 100%;
+    height: 80vh;
+    border-width: 0px 150px;
+    border-style: solid;
+    border-color: #4C4C4C;
+    padding: 150px 50px;
+    overflow:auto;
+}
+
+.container:empty{
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.navbar{
+    list-style-type: none;
+    overflow: hidden;
+    background-color:#ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 300;
+    box-shadow: 0 2px 20px -6px gray;
+  }
+
+.navbar li#engima {
+    float: left;
+    padding: 20px 0px 20px 200px;
+}
+
+.navbar li#transactions {
+    float: right;
+    padding: 20px 50px 20px 0px;
+}
+
+.navbar li#logout{
+    float: right;
+    padding: 20px 200px 20px 0px;
+}
+
+.navbar li#search{
+    float: left;
+    padding: 20px 20px 20px 50px;
+}
+
+.buttonwrap{
+    border-radius: 10px;
+    border: 1px solid #bdbdbd;
+    padding: 3px;
+}
+
+.navbar li#search input[type=text]{
+    padding: 6px;
+    font-size: 12px;
+    width: 250px;
+    border: none;
+    outline: none;
+}
+
+.navbar li#search form button {
+    float: right;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+
+.searchicon{
+    width: 25px;
+    height: 25px;    
+}
+
+.navbar li a{
+    display: block;
+    columns: #111111;
+    text-align: center;
+    text-decoration: none;
+}
+
+#engifont{
+    display: inline-block;
+    color: #2eb6bf;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: -3px;
+}
+
+#mafont{
+    display: inline-block;
+    color: #111111;
+    font-weight: 550;
+    font-size: 20px;
+    margin-left: -3px;
+}
+
+#transactionlogoutfont{
+    display: inline-block;
+    color: #111111;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: -3px;
+}
+
+#column-side {
+    background-color: #2C2C2C;
+    width: 8%;
+}
+
+.column {
+    box-sizing: border-box;
+    float: left;
+    width: 84%;
+    padding: 10px;
+    height: 100vh; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+#username {
+    color: #00c1ec;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+.movie-item{
+    float:left;
+    height:350px;
+    margin:2%;
+    overflow:hidden;
+    position:relative;
+    width:16%
+}
+
+.cover-movie
+{
+    border-radius: 10%;
+    width: 182px;
+    height: 268px;
+}
+
+.rating {
+    color:  rgb(110, 110, 133);
+}
+
+#star {
+    height:15px;
+    width:15px;
+    display: inline;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color:black;
+  }
+  
+  /* mouse over link */
+a:hover {
+    color: #00c1ec;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+.imagesearch {
+    height: 125px;
+    width: 100px;
+    border-radius: 5px;
+    margin:15px 20px;
+}
+
+.filmtitlesearch h2 {
+    font-weight: bold;
+}
+
+.movie-list li:last-child {
+    border-bottom: none;
+}
+
+.movie-list li {
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.view-detail {
+    float: right;
+    color: #00c1ec;
+}
+
+.page label {
+    font-weight: bolder;
+    color: #00bcd4f5;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border: 1px solid #ddd;
+    line-height: 23px;
+    cursor: pointer;
+    padding: 2px;
+    margin: 15px 10px 3px 3px;
+    font-size: 15px;
+    border-radius: 10%;
+    border-color: #00bcd4f5;
+}
