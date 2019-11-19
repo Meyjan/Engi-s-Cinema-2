@@ -14,6 +14,7 @@ class Detail extends Controller{
         $data['content'] = $this->model('detail')->ShowMovieDetail($id);
         $data['schedule'] = $this->model('detail')->ShowSchedule($id);
         $data['review'] = $this->model('detail')->ShowReview($id);
+        $data['critics'] = $this->model('detail')->ShowCritics($id);
         date_default_timezone_set('Asia/Jakarta');
         $data['currentDateTime'] = date('Y-m-d H:i:s');
         $this->render('template/header',$data);
