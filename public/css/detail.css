@@ -2,6 +2,11 @@
     display: flex;
 }
 
+.flex-vertical{
+    display: flex;
+    flex-direction: column;
+}
+
 .image{
     height: 200px;
     width: 150px;

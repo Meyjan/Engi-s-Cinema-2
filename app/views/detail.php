@@ -1,13 +1,14 @@
 
         <div class="container">
             <div class="flex">
-                <div class="leftcontent"><img class="image" src="<?= BASEURL ?>/img/<?= $data['content']['photo'] ?>"></div>
+                <?php $img_source = "https://image.tmdb.org/t/p/w185_and_h278_bestv2" ?>
+                <div class="leftcontent"><img class="image" src=<?= $img_source . $data['content']['poster_path'] ?>></div>
                 <div class="rightcontent">
-                    <div class="title"><?= $data['content']['name'] ?></div>
-                    <div class="genre-time"><?= $data['content']['category'] . " | " . $data['content']['duration'] . " mins" ?></div>
+                    <div class="title"><?= $data['content']['original_title'] ?></div>
+                    <div class="genre-time"><?= $data['content']['genres'][0]["name"] . " | " . $data['content']['runtime'] . " mins" ?></div>
                     <div class="released"><?= "Released date: " . $data['content']['release_date']; ?></div>
-                    <div class="rating"><?= "⭐" . $data['content']['rating'] . " / 10"; ?></div>
-                    <div class="synopsis"><p><?= $data['content']['description']; ?></p></div>
+                    <div class="rating"><?= "⭐" . $data['content']['vote_average'] . " / 10"; ?></div>
+                    <div class="synopsis"><p><?= $data['content']['overview']; ?></p></div>
                 </div>
             </div>
             <div class="flex">
@@ -42,7 +43,23 @@
                         </ul>
                     </div>
                 </div>
+                
                 <div class="rightcontent">
+                    <div class="review">
+                        <p class="contenttitle">Critics</p>
+                        <ul>
+                            <?php foreach($data['critics'] as $rev) : ?>
+                            <li>
+                                <div class="rightcontent" id="reviewborder">
+                                    <div class="flex-vertical">
+                                        <div id="username"><?= $rev['author'] ?></div>
+                                        <div id="userreview"><p><?= $rev['content'] ?></p></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
                     <div class="review">
                         <p class="contenttitle">Reviews</p>
                         <ul>

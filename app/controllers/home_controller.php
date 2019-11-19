@@ -5,6 +5,7 @@ class Home extends Controller {
         if (isset($_COOKIE["username"])) {
             $title['judul'] = "Home";
             $data = $this->model('movie')->getAllMovie();
+            
             $this->render('template/header',$title);
             $this->render('index',$data);
         }

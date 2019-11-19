@@ -28,6 +28,41 @@ class buyticket_model{
         return $this->db->resultSet();
     }
 
+    public function New_InsertWatches ($id_user, $id_film, $id_schedule, $idseat) {
+        // SOAP... GET VIRTUAL ACCOUNT FIRST
+
+        // Dummy VA => Should get from SOAP
+        $virtual_acc = 12345;
+
+        $ch = curl_init();
+        $init_url = "http://localhost:3005/add";
+        
+        $user = "user=" . $id_user;
+        $film = "film=" . $id_film;
+        $schedule = "schedule=" . $id_schedule;
+        $seat = "chair=" . $id_seat;
+        $va = "va=" . $virtual_acc;
+
+        $url = $init_url;
+        $post_field = $user + "&" + $film + "&" + $schedule + "&" + $seat + "&" + $va;
+
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLPOT_POSTFIELDS,$post_field);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        $output = curl_exec($ch);
+        
+        if ($output == "OK") {
+            $output = json_decode($output, true)['values']['message'];
+        }
+        else {
+            $output = "FAIL";
+        }
+
+        return ($output);
+    }
+
     public function InsertWatches($id_user, $id_schedule, $chair)
     {
         $sql_insert = "INSERT INTO watches (`id_user`, `id_schedule`, `chair_number`) VALUES (:id_user, :id_schedule, :chair)";
@@ -38,6 +73,36 @@ class buyticket_model{
         
         $this->db->execute();
         return $this->db->rowCount();
+    }
+
+    public function New_UpdateSeat ($id_user, $id_film, $id_schedule, $id_seat) 
+    {
+        $ch = curl_init();
+        $init_url = "http://localhost:3005/set_seat";
+        
+        $user = "user=" . $id_user;
+        $film = "film=" . $id_film;
+        $schedule = "schedule=" . $id_schedule;
+        $seat = "chair=" . $id_seat;
+
+        $url = $init_url;
+        $post_field = $user + "&" + $film + "&" + $schedule + "&" + $seat;
+
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLPOT_POSTFIELDS,$post_field);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        $output = curl_exec($ch);
+        
+        if ($output == "OK") {
+            $output = json_decode($output, true)['values']['message'];
+        }
+        else {
+            $output = "FAIL";
+        }
+
+        return ($output);
     }
 
     public function UpdateSeat($id_schedule,$idseat)
