@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" type="text/css" href="<?= BASEURL ?>/css/styles.css">
     <link rel="stylesheet" type="text/css" href="<?= BASEURL ?>/css/detail.css">
@@ -10,6 +11,7 @@
     <title><?= $data['judul'] ?></title>
     <script type="text/javascript" src="<?= BASEURL ?>/js/buyticket.js"></script>
 </head>
+
 <body>
     <ul class="navbar">
         <li id="engima">
@@ -26,15 +28,17 @@
                 </form>
             </div>
         </li>
-        <?php 
-            if(isset($_GET['moviesearch'])){
-                echo $_GET['moviesearch'];
-            }
+        <?php
+        if (isset($_GET['moviesearch'])) {
+            echo $_GET['moviesearch'];
+        }
         ?>
         <li id="logout">
-            <a href="<?= BASEURL ?>/logout/out_account"><p id="transactionlogoutfont">Logout</p></a>
+            <a href="<?= BASEURL ?>/logout/out_account">
+                <p id="transactionlogoutfont">Logout</p>
+            </a>
         </li>
         <li id="transactions">
-            
+
         </li>
     </ul>
