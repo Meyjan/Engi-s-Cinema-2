@@ -1,11 +1,12 @@
 <?php
 
-class detail_model{
+class detail_model
+{
     private $data;
     private $db;
 
     public function __construct()
-    { 
+    {
         $this->db = new Database;
         //$this->data = $_GET['id'];
     }
@@ -40,12 +41,13 @@ class detail_model{
         return $this->ShowMovieDetail_New($id);
     }
 
-    public function ShowSchedule_New($id) {
+    public function ShowSchedule_New($id)
+    {
         if ($id == "home") {
-            echo("home detected");
+            echo ("home detected");
             return;
         }
-        
+
         $this->db->query("SELECT id, date_of_play FROM schedules");
 
         $schedule_list = $this->db->resultSet();
@@ -75,7 +77,7 @@ class detail_model{
         }
         return ($total_result);
     }
-    
+
     public function ShowSchedule($id)
     {
         // $this->db->query("SELECT id_schedule, id_movie, date_of_play, SUM(vacant) AS vacant FROM schedules S JOIN shows SH ON S.id=SH.id_schedule JOIN seats SE ON SE.id_schedules=SH.id_schedule WHERE id_movie='$id' GROUP BY SH.id_schedule ORDER BY date_of_play ASC");

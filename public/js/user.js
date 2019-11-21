@@ -1,4 +1,4 @@
-let getImageName = function() {
+let getImageName = function () {
     document.getElementById('fileinput').onchange = function () {
         let str = this.value;
         document.getElementById("image-name").value = str.split(/(\\|\/)/g).pop();
@@ -8,21 +8,21 @@ let getImageName = function() {
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
+    for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
     }
     return " ";
 }
 
 function requestId(uname) {
-    var data = "username="+uname;
+    var data = "username=" + uname;
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "home/request_id", false);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    
+
     xhr.send(data);
     if (xhr.status == 200 && xhr.readyState == 4) {
         return xhr.response;
@@ -35,12 +35,11 @@ function changeLink() {
     alert(a.getAttribute('href'))
 }
 
-function setStar(rating) 
-{
-    for (i = 1; i <= 10-rating+1; i++) {
-        var star = document.getElementById("star"+i);
+function setStar(rating) {
+    for (i = 1; i <= 10 - rating + 1; i++) {
+        var star = document.getElementById("star" + i);
         star.checked = true;
-      }
+    }
 }
 
 
