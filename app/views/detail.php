@@ -1,14 +1,14 @@
 <div class="container">
     <div class="flex">
         <?php $img_source = "https://image.tmdb.org/t/p/w185_and_h278_bestv2" ?>
-        <div class="leftcontent"><img class="image" src=<?= $img_source . $data['content']['poster_path'] ?>></div>
+        <div class="leftcontent"><img class="image" src=<?php echo $img_source . $data['content']['poster_path'] ?>></div>
         <div class="rightcontent">
-            <div class="title"><?= $data['content']['original_title'] ?></div>
-            <div class="genre-time"><?= $data['content']['genres'][0]["name"] . " | " . $data['content']['runtime'] . " mins" ?></div>
-            <div class="released"><?= "Released date: " . $data['content']['release_date']; ?></div>
-            <div class="rating"><?= "⭐" . $data['content']['vote_average'] . " / 10"; ?></div>
+            <div class="title"><?php echo $data['content']['original_title'] ?></div>
+            <div class="genre-time"><?php echo $data['content']['genres'][0]["name"] . " | " . $data['content']['runtime'] . " mins" ?></div>
+            <div class="released"><?php echo "Released date: " . $data['content']['release_date']; ?></div>
+            <div class="rating"><?php echo "⭐" . $data['content']['vote_average'] . " / 10"; ?></div>
             <div class="synopsis">
-                <p><?= $data['content']['overview']; ?></p>
+                <p><?php echo $data['content']['overview']; ?></p>
             </div>
         </div>
     </div>
@@ -28,14 +28,14 @@
                                 <?php $temp['date'] = array(); ?>
                                 <div class="flex" id="attribute">
                                     <?php $temp['date'] = date('F j, Y', strtotime($sch['date_of_play'])) ?>
-                                    <span id="datevalue"><?= substr($temp['date'], 0) ?></span>
+                                    <span id="datevalue"><?php echo substr($temp['date'], 0) ?></span>
                                     <?php $temp['date'] = date('h.i A', strtotime($sch['date_of_play'])) ?>
-                                    <span id="filmtimevalue"><?= substr($temp['date'], 0) ?></span>
-                                    <span id="seatvalue"><?= $sch['vacant'] ?></span>
+                                    <span id="filmtimevalue"><?php echo substr($temp['date'], 0) ?></span>
+                                    <span id="seatvalue"><?php echo $sch['vacant'] ?></span>
                                     <?php if ($sch['vacant'] == 0) { ?>
-                                        <span id="notavail">Not Available<img src="<?= BASEURL ?>/img/notavailable.png"></span>
+                                        <span id="notavail">Not Available<img src="<?php echo BASEURL ?>/img/notavailable.png"></span>
                                     <?php } else { ?>
-                                        <span id="avail">Book Now<a href="<?= BASEURL ?>/buyticket/show/<?= $sch['idmovie'] . '/' . $sch['id_schedule'] ?>" s><img src="<?= BASEURL ?>/img/booknow.png"></a></span>
+                                        <span id="avail">Book Now<a href="<?php echo BASEURL ?>/buyticket/show/<?php echo $sch['idmovie'] . '/' . $sch['id_schedule'] ?>" s><img src="<?php echo BASEURL ?>/img/booknow.png"></a></span>
                                     <?php } ?>
                                 </div>
                             </li>
@@ -53,9 +53,9 @@
                         <li>
                             <div class="rightcontent" id="reviewborder">
                                 <div class="flex-vertical">
-                                    <div id="username"><?= $rev['author'] ?></div>
+                                    <div id="username"><?php echo $rev['author'] ?></div>
                                     <div id="userreview">
-                                        <p><?= $rev['content'] ?></p>
+                                        <p><?php echo $rev['content'] ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -69,12 +69,12 @@
                     <?php foreach ($data['review'] as $rev) : ?>
                         <li>
                             <div class="flex">
-                                <div class="leftcontent"><img class="userimage" src="<?= BASEURL ?>/img/<?= $rev['photo'] ?>"></div>
+                                <div class="leftcontent"><img class="userimage" src="<?php echo BASEURL ?>/img/<?php echo $rev['photo'] ?>"></div>
                                 <div class="rightcontent" id="reviewborder">
-                                    <div id="username"><?= $rev['username'] ?></div>
-                                    <div id="userrating"><?= '⭐ ' . $rev['rating'] . ' / 10' ?></div>
+                                    <div id="username"><?php echo $rev['username'] ?></div>
+                                    <div id="userrating"><?php echo '⭐ ' . $rev['rating'] . ' / 10' ?></div>
                                     <div id="userreview">
-                                        <p><?= $rev['content'] ?></p>
+                                        <p><?php echo $rev['content'] ?></p>
                                     </div>
                                 </div>
                             </div>

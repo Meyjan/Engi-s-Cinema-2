@@ -1,0 +1,25 @@
+before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+
+stages:
+  - test
+  - deploy
+
+# Lint
+lint:
+  stage: test
+  script:
+    - phpcbf app
+    - phpcs -n --standard=PEAR app
+
+# Deploy
+deploy:dev:
+  stage: deploy
+  script:
+    - cd /opt/lampp/htdocs
+    - rm -rf engima
+    - git clone git@gitlab.informatika.org:if3110-2019-02-k02-01/engima.git
+  only:
+    - master
+    # - development
+    # - hotfix/HF01-CICD

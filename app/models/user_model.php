@@ -1,6 +1,7 @@
 <?php
 
-class user_model {
+class user_model
+{
 
     private $data;
     private $db;
@@ -91,7 +92,8 @@ class user_model {
     
     }
 
-    function getID($username) {
+    function getID($username)
+    {
         $sql_username = "SELECT id FROM users WHERE username='$username'";
         $this->db->query($sql_username);
         $this->db->bind('username', $username);

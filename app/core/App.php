@@ -1,6 +1,7 @@
 <?php
 
-class App {
+class App
+{
     //defaults
     protected $controller = 'home';
     protected $method = 'index';
@@ -17,19 +18,19 @@ class App {
             unset($url[0]);
         }
 
-        require_once '../app/controllers/' . $this->controller . '_controller.php';
+        include_once '../app/controllers/' . $this->controller . '_controller.php';
         $this->controller = new $this->controller;
 
         // method
-        if( isset($url[1]) ) {
-            if ( method_exists($this->controller, $url[1] ) ) {
+        if(isset($url[1]) ) {
+            if (method_exists($this->controller, $url[1]) ) {
                 $this->method = $url[1];
                 unset($url[1]);
             }
         }
 
         // params
-        if( !empty($url) ) {
+        if(!empty($url) ) {
             $this->params = array_values($url);
         }
         else {
@@ -41,7 +42,7 @@ class App {
 
     public function parseURL()
     {
-        if ( isset($_GET['url']) ) {
+        if (isset($_GET['url']) ) {
             $url = rtrim($_GET['url'], '/');
             $url = explode('/', $url);
             return $url;

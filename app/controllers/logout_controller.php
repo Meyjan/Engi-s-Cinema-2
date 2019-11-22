@@ -1,7 +1,8 @@
 <?php
 
 
-class Logout extends Controller {
+class Logout extends Controller
+{
     
     public function out_account()
     {

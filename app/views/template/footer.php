@@ -1,3 +1,3 @@
     </body>
-    <script src="<?= BASEURL ?>/js/user.js"></script>
+    <script src="<?php echo BASEURL ?>/js/user.js"></script>
 </html>

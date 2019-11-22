@@ -1,6 +1,7 @@
 <?php
 
-class history_model{
+class history_model
+{
     private $data;
     private $db;
 

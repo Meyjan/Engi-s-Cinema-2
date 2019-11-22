@@ -1,6 +1,7 @@
 <?php
 
-class review_model{
+class review_model
+{
     private $data;
     private $db;
 

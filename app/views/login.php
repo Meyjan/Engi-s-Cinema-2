@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="<?= BASEURL ?>/css/form.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo BASEURL ?>/css/form.css">
         <title>Login Engima</title>
     </head>
     <body>
@@ -41,6 +41,6 @@
             <p>Don't have any account? <a href="register">Register here!</a></p>
         </div>
     </body> 
-    <script src="<?= BASEURL ?>/js/error-message.js"></script>
-    <script src="<?= BASEURL ?>/js/user.js"></script>
+    <script src="<?php echo BASEURL ?>/js/error-message.js"></script>
+    <script src="<?php echo BASEURL ?>/js/user.js"></script>
 </html>

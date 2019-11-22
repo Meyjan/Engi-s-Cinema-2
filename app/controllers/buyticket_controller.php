@@ -69,5 +69,7 @@ class Buyticket extends Controller
     //         header('Location: ' . BASEURL . '/history/show/' . $id_user);
     //     }
     // }
+    
+    //sudo systemctl reload nginx.service && systemctl stop nginx.service
 
 }

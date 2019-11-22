@@ -1,6 +1,7 @@
 <?php
 
-class movie_model {
+class movie_model
+{
     private $data;
     private $db;
     private $api_key = "24e24f2fe04971613e54501530daca7e";
@@ -14,7 +15,7 @@ class movie_model {
 
     public function getAllMovie_New()
     {
-        $end = FALSE;
+        $end = false;
         $i = 1;
 
         $result = array();
@@ -50,7 +51,7 @@ class movie_model {
             $i += 1;
 
             if ($i > 3 || empty($output)) {
-                $end = TRUE;
+                $end = true;
             }
         }
 
@@ -71,7 +72,7 @@ class movie_model {
 
     public function getMovieByName_New($name)
     {
-        $end = FALSE;
+        $end = false;
         $i = 1;
 
         $result = array();
@@ -106,7 +107,7 @@ class movie_model {
             $i += 1;
 
             if ($i > 3 || empty($output)) {
-                $end = TRUE;
+                $end = true;
             }
         }
 

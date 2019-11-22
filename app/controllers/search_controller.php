@@ -1,10 +1,11 @@
 <?php
-class Search extends Controller {
+class Search extends Controller
+{
     
     public $search_q = "";
     public function index($data) 
     {
-        $this->render('template/header',$title);
+        $this->render('template/header', $title);
         $this->render('search', $data);
         $this->render('template/footer');
     }
@@ -13,8 +14,7 @@ class Search extends Controller {
     {
         if (isset($_COOKIE["username"])) {
             $title['judul'] = "Search";
-            if (substr($val[1], -1) == "=") 
-            {
+            if (substr($val[1], -1) == "=") {
                 $search_q = "";
             }
             else {

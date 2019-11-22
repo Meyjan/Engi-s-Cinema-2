@@ -1,12 +1,12 @@
 
         <div class="container">
             <div class="flex">
-                <a href="<?= BASEURL . '/history/show/' . $data['iduser'] ?>"><img class="prevnav" src="<?= BASEURL ?>/img/prevnav.png"></a>
-                <div id="title"><?= $data['userreview']['name'] ?></div>
+                <a href="<?php echo BASEURL . '/history/show/' . $data['iduser'] ?>"><img class="prevnav" src="<?php echo BASEURL ?>/img/prevnav.png"></a>
+                <div id="title"><?php echo $data['userreview']['name'] ?></div>
             </div>
             
-            <?php if(empty($data['userreview']['content'])){?>
-                <form action="<?= BASEURL . '/history/insert/' . $data['iduser'] ?>" method="POST">
+            <?php if(empty($data['userreview']['content'])) {?>
+                <form action="<?php echo BASEURL . '/history/insert/' . $data['iduser'] ?>" method="POST">
                 <div id="dom-target" style="display: none;">
                     <?php
                         echo htmlspecialchars(0); /* You have to escape because the result */
@@ -37,12 +37,12 @@
                             </div>
                             <div class="flex" id="button">
                             <button type="reset" value ="Reset" class="leftcontent" id="buttoncancel"><strong>Cancel</strong></button>
-                            <button type="submit" name="idmovie" value="<?= $data['idmovie'] ?>" class="rightcontent" id="buttonsubmit"><strong>Submit</strong></button>
+                            <button type="submit" name="idmovie" value="<?php echo $data['idmovie'] ?>" class="rightcontent" id="buttonsubmit"><strong>Submit</strong></button>
                         </div>
                     </div>
                 </form>
             <?php }else{ ?>
-                <form action="<?= BASEURL . '/history/update/' . $data['iduser'] ?>" method="POST">
+                <form action="<?php echo BASEURL . '/history/update/' . $data['iduser'] ?>" method="POST">
                 <div id="dom-target" style="display: none;">
                     <?php
                         echo htmlspecialchars($data['userreview']['rating']); /* You have to escape because the result */
@@ -69,11 +69,11 @@
                         <div class="leftcontent" id="leftcontentstyle">Add Review</div>
                         <div class="rightcontent" id="rightcontentstyle">
                             <div class="flex">
-                                <textarea id="reviewcontent" name="content" placeholder="Write something..."><?= $data['review']['content']?></textarea>
+                                <textarea id="reviewcontent" name="content" placeholder="Write something..."><?php echo $data['review']['content']?></textarea>
                             </div>
                             <div class="flex" id="button">
                             <button type="reset" value ="Reset" class="leftcontent" id="buttoncancel"><strong>Cancel</strong></button>
-                            <button type="submit" name="idmovie" value="<?= $data['idmovie'] ?>" class="rightcontent" id="buttonsubmit"><strong>Submit</strong></button>
+                            <button type="submit" name="idmovie" value="<?php echo $data['idmovie'] ?>" class="rightcontent" id="buttonsubmit"><strong>Submit</strong></button>
                         </div>
                     </div>
                 </form>

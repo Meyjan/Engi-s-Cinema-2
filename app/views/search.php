@@ -1,8 +1,8 @@
 <div class="container">
             <div id="title">
                 <br>
-                <h3>Showing search result for keyword <?= substr(basename($_SERVER['REQUEST_URI']), strrpos(basename($_SERVER['REQUEST_URI']), '=' )+1) ?></h3>
-                <p><?= count($data) ?> results available </p>
+                <h3>Showing search result for keyword <?php echo substr(basename($_SERVER['REQUEST_URI']), strrpos(basename($_SERVER['REQUEST_URI']), '=')+1) ?></h3>
+                <p><?php echo count($data) ?> results available </p>
                 <br>
 
             </div>
@@ -20,13 +20,13 @@
                         <?php $img_source = "https://image.tmdb.org/t/p/w185_and_h278_bestv2" ?>
                         <?php foreach($data as $mov) : ?>    
                             <li class="listing_table">
-                                <div class="flex" id=<?= $mov['id'] ?>>
-                                    <div class="leftcontentsearch" style="display: none;"><img class="imagesearch" id="photo-<?= $mov['poster_path'] ?>" src="<?=$img_source . $mov['poster_path'] ?>"/></div>
+                                <div class="flex" id=<?php echo $mov['id'] ?>>
+                                    <div class="leftcontentsearch" style="display: none;"><img class="imagesearch" id="photo-<?php echo $mov['poster_path'] ?>" src="<?php echo $img_source . $mov['poster_path'] ?>"/></div>
                                     <div class="rightcontentsearch" id="rightcontenttime" style="display: none;">
-                                        <div class="filmtitlesearch"  style="display: none;"><h2><a class='btn detail-link'><?= $mov['title'] ?> </a></h2></div>
-                                        <div class="ratingsearch"  style="display: none;"><h4 class="rating"><img id="star" src="<?= BASEURL ?>/img/star.png">  <?= $mov['vote_average'] ?></h4></span></div>
-                                        <div class="descriptionsearch"  style="display: none;"><p class="desc"><?= $mov['overview'] ?></p></div>
-                                        <a href="<?= BASEURL ?>/detail/show/<?= $mov['id'] ?>" class="view-detail"  style="display: none;">View Detail  <img id="star" src="<?= BASEURL ?>/img/right-chevron.png"></a>
+                                        <div class="filmtitlesearch"  style="display: none;"><h2><a class='btn detail-link'><?php echo $mov['title'] ?> </a></h2></div>
+                                        <div class="ratingsearch"  style="display: none;"><h4 class="rating"><img id="star" src="<?php echo BASEURL ?>/img/star.png">  <?php echo $mov['vote_average'] ?></h4></span></div>
+                                        <div class="descriptionsearch"  style="display: none;"><p class="desc"><?php echo $mov['overview'] ?></p></div>
+                                        <a href="<?php echo BASEURL ?>/detail/show/<?php echo $mov['id'] ?>" class="view-detail"  style="display: none;">View Detail  <img id="star" src="<?php echo BASEURL ?>/img/right-chevron.png"></a>
                                     </div>
                                 </div>
                             </li>
@@ -42,5 +42,5 @@
                     </div>
                 </div>
         </div>
-        <script src="<?= BASEURL ?>/js/user.js"></script>
-        <script src="<?= BASEURL ?>/js/pagination.js"></script>
+        <script src="<?php echo BASEURL ?>/js/user.js"></script>
+        <script src="<?php echo BASEURL ?>/js/pagination.js"></script>
