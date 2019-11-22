@@ -2,15 +2,15 @@ before_script:
   - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
 
 stages:
-  - test
+  # - test
   - deploy
 
 # Lint
-lint:
-  stage: test
-  script:
-    - phpcbf app
-    - phpcs -n --standard=PEAR app
+# lint:
+#   stage: test
+#   script:
+#     - phpcbf app
+#     - phpcs -n --standard=PEAR app
 
 # Deploy
 deploy:dev:
@@ -22,4 +22,4 @@ deploy:dev:
   only:
     - master
     # - development
-    # - hotfix/HF01-CICD
+    - feature/F03-CI-CD
