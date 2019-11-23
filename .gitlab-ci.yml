@@ -17,8 +17,11 @@ deploy:dev:
   stage: deploy
   script:
     - cd /opt/lampp/htdocs
+    - sudo rm -rf engima
+    - cd ~
     - rm -rf engima
     - git clone git@gitlab.informatika.org:if3110-2019-02-k02-01/engima.git
+    - sudo cp -r engima /opt/lampp/htdocs
   only:
     - master
     # - development
