@@ -17,14 +17,15 @@
                    
                     <div class="movie-list" id="attribute">
                     <ul>
+                        <?php $img_source = "https://image.tmdb.org/t/p/w185_and_h278_bestv2" ?>
                         <?php foreach($data as $mov) : ?>    
                             <li class="listing_table">
-                                <div class="flex">
-                                    <div class="leftcontentsearch" style="display: none;"><img class="imagesearch" id="photo-<?= $mov['photo'] ?>" src="<?= BASEURL ?>/img/<?= $mov['photo'] ?>"/></div>
+                                <div class="flex" id=<?= $mov['id'] ?>>
+                                    <div class="leftcontentsearch" style="display: none;"><img class="imagesearch" id="photo-<?= $mov['poster_path'] ?>" src="<?=$img_source . $mov['poster_path'] ?>"/></div>
                                     <div class="rightcontentsearch" id="rightcontenttime" style="display: none;">
-                                        <div class="filmtitlesearch"  style="display: none;"><h2><a class='btn detail-link'><?= $mov['name'] ?> </a></h2></div>
-                                        <div class="ratingsearch"  style="display: none;"><h4 class="rating"><img id="star" src="<?= BASEURL ?>/img/star.png">  <?= $mov['rating'] ?></h4></span></div>
-                                        <div class="descriptionsearch"  style="display: none;"><p class="desc"><?= $mov['description'] ?></p></div>
+                                        <div class="filmtitlesearch"  style="display: none;"><h2><a class='btn detail-link'><?= $mov['title'] ?> </a></h2></div>
+                                        <div class="ratingsearch"  style="display: none;"><h4 class="rating"><img id="star" src="<?= BASEURL ?>/img/star.png">  <?= $mov['vote_average'] ?></h4></span></div>
+                                        <div class="descriptionsearch"  style="display: none;"><p class="desc"><?= $mov['overview'] ?></p></div>
                                         <a href="<?= BASEURL ?>/detail/show/<?= $mov['id'] ?>" class="view-detail"  style="display: none;">View Detail  <img id="star" src="<?= BASEURL ?>/img/right-chevron.png"></a>
                                     </div>
                                 </div>
